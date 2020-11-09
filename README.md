@@ -1,3 +1,8 @@
+Get the gist of this:
+   https://gist.github.com/Hendoe/2fa5b679e8eb8bcffd8c04bcb4ea5734
+
+// ALL BELOW COMES FROM CLONE //
+
 # Spaced Repetition Capstone
 
 ## Setup
