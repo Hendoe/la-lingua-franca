@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
-import { Input, Label } from '../Form/Form'
-import AuthApiService from '../../services/auth-api-service'
-import UserContext from '../../contexts/UserContext'
-import Button from '../Button/Button'
+import React, { Component } from 'react';
+import { Input, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import Button from '../Button/Button';
+import './LoginForm.css';
 
 class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => { }
-  }
+  };
 
-  static contextType = UserContext
+  static contextType = UserContext;
 
-  state = { error: null }
+  state = { error: null };
 
-  firstInput = React.createRef()
+  firstInput = React.createRef();
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -34,50 +35,61 @@ class LoginForm extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
-  }
+  };
 
   componentDidMount() {
     this.firstInput.current.focus()
-  }
+  };
 
   render() {
     const { error } = this.state
     return (
-      <form
-        className='LoginForm'
+      <form className='login-form'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div>
-          <Label htmlFor='login-username-input'>
-            Username
-          </Label>
-          <Input
-            ref={this.firstInput}
-            id='login-username-input'
-            name='username'
-            required
-          />
+        <div className='flex-box'>
+          <span className='flex-item'>
+            <Label htmlFor='login-username-input'>
+              Username
+            </Label>
+          </span>
+          <span className='flex-item'>
+            <Input
+              ref={this.firstInput}
+              id='login-username-input'
+              name='username'
+              required
+            />
+          </span>
         </div>
-        <div>
-          <Label htmlFor='login-password-input'>
-            Password
-          </Label>
-          <Input
-            id='login-password-input'
-            name='password'
-            type='password'
-            required
-          />
+        <br />
+        <div className='flex-box'>
+          <span className='flex-item'>
+            <Label htmlFor='login-password-input'>
+              Password
+            </Label>
+          </span>
+          <span className='flex-item'>
+            <Input
+              id='login-password-input'
+              name='password'
+              type='password'
+              required
+            />
+          </span>
         </div>
-        <Button type='submit'>
-          Login
-        </Button>
+        <br />
+        <span className='flex-item'>
+          <Button type='submit'>
+            Login
+          </Button>
+        </span>
       </form>
     )
-  }
-}
+  };
+};
 
-export default LoginForm
+export default LoginForm;

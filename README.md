@@ -1,5 +1,8 @@
 Get the gist of this:
-   https://gist.github.com/Hendoe/2fa5b679e8eb8bcffd8c04bcb4ea5734
+    https://gist.github.com/Hendoe/2fa5b679e8eb8bcffd8c04bcb4ea5734
+
+Here's the Trello:
+    https://trello.com/c/K7gyGG29/5-registration-form
 
 // ALL BELOW COMES FROM CLONE //
 

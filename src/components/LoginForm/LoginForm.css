@@ -1,9 +1,9 @@
-.registration-form {
+.login-form {
   display: flex;
   flex: 4;
   flex-direction: column;
   font-weight: bold;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .flex-box {
@@ -17,7 +17,7 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .registration-form {
-    padding-bottom: 3rem;
+  .login-form {
+    padding-bottom: 6rem;
   }
 }

@@ -5,7 +5,10 @@
 }
 
 body {
-  background-image: linear-gradient( #D088EC, #F0DC00);
+  background-image: 
+  linear-gradient( #D088EC, #F0DC00), linear-gradient( #F0DC00, #1500b6, #1500b6, #1500b6, #0A0057, #0A0057);
+  background-position: top, bottom;
+  background-repeat: no-repeat, repeat;
   color: var(--primary);
   margin: 0;
   padding: 0;

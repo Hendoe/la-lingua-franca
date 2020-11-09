@@ -11,8 +11,8 @@ describe(`User story: Application name and purpose`, function() {
   it('has h1 with title', () => {
     cy.visit('/')
     cy.get('header h1')
-      .should('contain', 'Spaced repetition')
-      .get('p')
+      .should('contain', ('La Lingua' || 'Franca'))
+      .get('section h3')
       .should(
         'have.text',
         'Practice learning a language with the spaced reptition revision technique.'
