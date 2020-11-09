@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import TokenService from '../../services/token-service'
-import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import TokenService from '../../services/token-service';
+import UserContext from '../../contexts/UserContext';
+import './Header.css';
 
 class Header extends Component {
   static contextType = UserContext
 
   handleLogoutClick = () => {
     this.context.processLogout()
-  }
+  };
 
   renderLogoutLink() {
     return (
@@ -26,32 +26,35 @@ class Header extends Component {
         </nav>
       </div>
     )
-  }
+  };
 
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login'>Login</Link>
-        {' '}
-        <Link to='/register'>Sign up</Link>
+        <span className='top-bar'>
+          <Link className='item' to='/login'><h3>Login</h3></Link>
+          {' '}
+          <Link className='item' to='/register'><h3>Sign up</h3></Link>
+        </span>
       </nav>
     )
-  }
+  };
 
   render() {
     return (
-      <header>
-        <h1>
+      <header className='header'>
+        <span className='title'>
           <Link to='/'>
-            Spaced repetition
+            <h1 className='title-top'>La Lingua</h1>
+            <h1 className='title-bottom'>    Franca</h1>
           </Link>
-        </h1>
+        </span>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
       </header>
     );
-  }
-}
+  };
+};
 
-export default Header
+export default Header;

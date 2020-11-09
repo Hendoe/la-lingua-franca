@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Input, Required, Label } from '../Form/Form'
-import AuthApiService from '../../services/auth-api-service'
-import Button from '../Button/Button'
-import './RegistrationForm.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Input, Required, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import Button from '../Button/Button';
+import './RegistrationForm.css';
 
 class RegistrationForm extends Component {
   static defaultProps = {
     onRegistrationSuccess: () => { }
-  }
+  };
 
-  state = { error: null }
+  state = { error: null };
 
-  firstInput = React.createRef()
+  firstInput = React.createRef();
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -31,63 +31,80 @@ class RegistrationForm extends Component {
       .catch(res => {
         this.setState({ error: res.error })
       })
-  }
+  };
 
   componentDidMount() {
     this.firstInput.current.focus()
-  }
+  };
 
   render() {
     const { error } = this.state
     return (
-      <form
+      <form className='registration-form'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
-        <div>
-          <Label htmlFor='registration-name-input'>
-            Enter your name<Required />
-          </Label>
-          <Input
-            ref={this.firstInput}
-            id='registration-name-input'
-            name='name'
-            required
-          />
+        <div className='flex-box'>
+          <span className='flex-item'>
+            <Label htmlFor='registration-name-input'>
+              Enter your name<Required />
+            </Label>
+          </span>
+          <span className='flex-item'>
+            <Input
+              ref={this.firstInput}
+              id='registration-name-input'
+              name='name'
+              required
+            />
+          </span>
         </div>
-        <div>
-          <Label htmlFor='registration-username-input'>
-            Choose a username<Required />
-          </Label>
-          <Input
-            id='registration-username-input'
-            name='username'
-            required
-          />
+        <div className='flex-box'>
+          <span className='flex-item'>
+            <Label htmlFor='registration-username-input'>
+              Choose a username<Required />
+            </Label>
+          </span>
+          <span className='flex-item'>
+            <Input
+              id='registration-username-input'
+              name='username'
+              required
+            />
+          </span>
         </div>
-        <div>
-          <Label htmlFor='registration-password-input'>
-            Choose a password<Required />
-          </Label>
-          <Input
-            id='registration-password-input'
-            name='password'
-            type='password'
-            required
-          />
+        <div className='flex-box'>
+          <span className='flex-item'>
+            <Label htmlFor='registration-password-input'>
+              Choose a password<Required />
+            </Label>
+          </span>  
+          <span className='flex-item'>
+            <Input
+              id='registration-password-input'
+              name='password'
+              type='password'
+              required
+            />
+          </span>
         </div>
-        <footer>
-          <Button type='submit'>
-            Sign up
-          </Button>
-          {' '}
-          <Link to='/login'>Already have an account?</Link>
+        <br />
+        <footer className='flex-box'>
+          <span className='flex-item'>
+            <Button type='submit'>
+              Sign up
+            </Button>
+          </span>
+          <br />
+          <span className='flex-item'>
+            <Link to='/login'>Already have an account?</Link>
+          </span>
         </footer>
       </form>
     )
-  }
-}
+  };
+};
 
-export default RegistrationForm
+export default RegistrationForm;

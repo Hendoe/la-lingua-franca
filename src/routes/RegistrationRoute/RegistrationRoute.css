@@ -1,0 +1,43 @@
+.registrar {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.flag-belt {
+  display: flex;
+  flex: 3;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 4px;
+  padding: 4px 6px 8px 6px;
+  border-style: solid;
+  border-width: 4px 6px 8px 6px;
+  border-top-color: #F0DC00;
+  border-left-color: #F0DC00;
+  border-bottom-color: #D088EC;
+  border-right-color: #D088EC;
+}
+
+.flag {
+  height: 2.5rem;
+  width: 4rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .registrar {
+    font-size: 150%;
+  }
+  
+  .flag-belt {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 8rem;
+  }
+
+  .flag {
+    height: 6rem;
+    width: 8rem;
+  }
+}

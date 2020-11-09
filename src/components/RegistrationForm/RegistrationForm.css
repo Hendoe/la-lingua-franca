@@ -1,0 +1,23 @@
+.registration-form {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  font-weight: bold;
+  padding-bottom: 3rem;
+}
+
+.flex-box {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+@media only screen and (min-width: 900px) {
+  .registration-form {
+    padding-bottom: 6rem;
+  }
+}

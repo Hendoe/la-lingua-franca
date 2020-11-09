@@ -5,6 +5,8 @@
 }
 
 body {
+  background-image: linear-gradient( #D088EC, #F0DC00);
+  color: var(--primary);
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
@@ -12,6 +14,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: #380000;
+}
+
 :root {
   --font-size: calc(10px + 1vmin);
+  --primary: #0A0057;
+  --scondary: #D088EC;
+  --tertiary: #F0DC00;
 }
