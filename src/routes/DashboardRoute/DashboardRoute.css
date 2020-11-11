@@ -1,0 +1,47 @@
+.dash {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.flex-box {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-item {
+  flex: 1;
+  align-content: center;
+}
+
+.dash-flag {
+  padding: 1rem;
+  margin-left: 4rem;
+  border-style: solid;
+  background-image: linear-gradient( #00da0094, #165806);
+  height: 28rem;
+  width: 42rem;
+}
+
+.plate {
+  border-style: solid;
+  border-color: #352400;
+  border-width: 0px 2px 3px 2px;
+  padding-top: 1.5rem;
+  font-size: 175%;
+  align-self: center;
+  width: 20rem;
+  height: 6rem;
+  background-image: linear-gradient( #165806, #352400);
+  color: palevioletred;
+}
+
+@media only screen and (min-width: 900px) {
+  .dash {
+    font-size: 150%;
+  }
+}

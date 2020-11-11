@@ -15,6 +15,18 @@
   flex: 1;
 }
 
+.top-login {
+  display: flex;
+  flex: 3;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.item-login {
+  flex: 1;
+}
+
 .title-top {
   background: linear-gradient(170deg, #F0DC00,  #F0DC00, #380000, #380000, #380000);
   background-clip: text;
